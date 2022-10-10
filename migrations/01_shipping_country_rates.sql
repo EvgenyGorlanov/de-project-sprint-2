@@ -5,6 +5,8 @@ CREATE TABLE public.shipping_country_rates(
 	shipping_country_base_rate NUMERIC(14,3)
 );
 INSERT INTO public.shipping_country_rates (shipping_country, shipping_country_base_rate)
+SELECT *
+FROM public.shipping_country_rates LIMIT 10;
 SELECT DISTINCT
 	shipping_country,
 	shipping_country_base_rate
