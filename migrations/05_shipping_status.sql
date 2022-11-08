@@ -44,3 +44,4 @@ LEFT JOIN start_time t2 ON t1.shippingid = t2.shippingid
 LEFT JOIN end_time t3 ON t1.shippingid = t3.shippingid
 RIGHT JOIN actual_status_datetime t4 ON t1.shippingid = t4.shippingid AND t1.state_datetime = t4.actual_datetime
 ORDER BY shippingid
+LIMIT 10;

@@ -38,4 +38,5 @@ SELECT DISTINCT
 FROM public.shipping sp
 LEFT JOIN public.shipping_transfer st ON (st.transfer_type || ':' || st.transfer_model) = shipping_transfer_description
 LEFT JOIN public.shipping_country_rates scr ON (scr.shipping_country = sp.shipping_country)
-LEFT JOIN agreement_id_shipping sa ON sa.shippingid = sp.shippingid;
+LEFT JOIN agreement_id_shipping sa ON sa.shippingid = sp.shippingid
+LIMIT 10;

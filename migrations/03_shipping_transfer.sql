@@ -15,4 +15,5 @@ FROM(
 		regexp_split_to_array(shipping_transfer_description  , ':+') AS shipping_transfer,
 		shipping_transfer_rate
 	FROM public.shipping
-) t;
+) t
+LIMIT 10;

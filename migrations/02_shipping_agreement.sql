@@ -15,4 +15,5 @@ FROM(
 	SELECT DISTINCT
 		regexp_split_to_array(vendor_agreement_description , ':+') AS shipping_agreement
 	FROM public.shipping
-) t;
+) t
+LIMIT 10;
